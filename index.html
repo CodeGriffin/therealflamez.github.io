@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" /> <!--This links the html to css!, the code inside the href matches the file name in css (make sure it is in the same folder) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- here is the library link -->
+    <script src="jquery-3.4.0.min.js"></script>
+    <!-- below will go our script -->
+    <script src="scripts/navbar.js"></script>
+    <title> One Shared School Navbar </title>
+</head>
+
+<body>
+<nav>
+      <ul>
+        <button> 🞬 </button>
+        <li>
+          <a href="#About"> About </a>
+        </li>
+        <li>
+          <a href="#Schools"> Schools </a>
+        </li>
+        <li>
+          <a href = "#News"> News </a>
+        </li>
+        <li>
+          <a href "#Login"> Login/Register </a>
+        </li>
+</ul>
+    </nav>
+</body>
+  <script>
+    /* only execute this script when the document is ready */
+    $(document).ready(function(){
+    /* function called when you click of the button */
+    $("button").click(function(){
+
+        /* this if else to change the text in the button */
+        if($("button").text() == "☰"){
+         $("button").text("🞬");
+        }else{
+          $("button").text("☰");
+        }
+
+      /* this function toggle the visibility of our "li" elements */
+      $("li").toggle("slow");
+  });
+    });
+  </script>
+</html>
